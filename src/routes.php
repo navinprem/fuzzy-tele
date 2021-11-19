@@ -13,7 +13,7 @@ $app->get('/[{category}]', function ($request, $response, $args) {
         $errorMessage = $e->getMessage();
     }
 
-    // Any flash messages?
+    // Any flash messages to check?
     if (session_status() !== PHP_SESSION_NONE) {
         $messages = $this->flash->getMessages();
     }
